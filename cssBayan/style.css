@@ -1,0 +1,129 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.memes {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.container {
+    max-width: 32em;
+    margin: 0 auto;
+}
+
+.memes__title {
+    padding-left: 3%;
+}
+
+.memes__list {
+    margin: 0;
+    padding: 0;
+
+    color: rgb(83, 140, 190);
+
+    list-style: none;
+}
+
+.memes__content {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.memes__content:active {
+    opacity: 0.6;
+}
+
+.memes__image {
+    display: block;
+    height: 0%;
+    width: 0%;
+    max-width: 15em;
+    align-self: center;
+
+    transition: 0.5s;
+}
+
+.memes__input:checked + .memes__content .memes__image {
+    height: auto;
+    width: 100%;
+}
+
+.memes__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 3%;
+
+    border-top: 1px solid rgb(187, 186, 186);
+}
+
+.memes__input:checked + .memes__content .memes__text {
+    color: rgb(45, 48, 50);
+}
+
+.memes__icon {
+    height: 0.7em;
+    width: 0.7em;
+
+    transition: all 0.5s;
+}
+
+.memes__input:checked + .memes__content .memes__icon {
+    transform: rotate(45deg);
+}
+
+@media (hover:hover) {
+    .memes__list:hover {
+        color: rgb(45, 48, 50);
+    }
+
+    .memes__content:hover .memes__image {
+        height: auto;
+        width: 100%;
+    }
+
+    .memes__content:hover .memes__icon {
+        transform: rotate(45deg);
+    }
+
+    .memes__icon {
+        display: none;
+    }
+
+    .memes__list:hover .memes__icon {
+        display: block;
+    }
+}
+
+@media (min-width: 820px) {
+    .memes {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1270px) {
+    .memes {
+        font-size: 2.5em;
+    }
+
+    .memes__image {
+        max-width: 12em;
+    }
+}
