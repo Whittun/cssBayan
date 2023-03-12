@@ -57,7 +57,7 @@
     max-width: 15em;
     align-self: center;
 
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .memes__input:checked + .memes__content .memes__image {
@@ -82,7 +82,7 @@
     height: 0.7em;
     width: 0.7em;
 
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 .memes__input:checked + .memes__content .memes__icon {
